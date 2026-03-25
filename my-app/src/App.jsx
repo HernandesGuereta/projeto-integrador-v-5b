@@ -7,6 +7,82 @@ import Botao from './components/Botao'
 import Capturar from './components/Capturar'
 
 function App() {
+  const [form, setForm] = useState({
+    nome: '',
+    email: '',
+    cidade: '',
+    perfil: '',
+    receberNotificacoes: false,
+    observacoes: ''
+  })
+
+  function handleChange(e) {
+    const { name, value, type, checked } = e.target
+    setForm(prevForm => ({
+      ...prevForm,
+      [name]: type === 'checkbox' ? checked : value
+    }))
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault()
+    console.log(form)
+}
+
+console.log(form)
+
+
+return (
+  <div id="container">
+    <h2 id="titulo">Formulário de Cadastro</h2>
+    <form onSubmit={handleSubmit}>
+      <label>
+        Nome:
+        <input type="text" name="nome" value={form.nome} onChange={handleChange} />
+      </label>
+      <br />
+      <label>
+        Email:
+        <input type="email" name="email" value={form.email} onChange={handleChange} />
+      </label>
+      <br />
+      <label>
+        Cidade:
+        <input type="text" name="cidade" value={form.cidade} onChange={handleChange} />
+      </label>
+      <br />
+      <label>
+        Perfil:
+        <select name="perfil" value={form.perfil} onChange={handleChange}>
+          <option value="">Selecione</option>
+          <option value="estudante">Estudante</option>
+          <option value="profissional">Profissional</option>
+          <option value="outro">Outro</option>
+        </select>
+      </label>
+      <br />
+      <label>
+        Receber notificações:
+        <input type="checkbox" name="receberNotificacoes" checked={form.receberNotificacoes} onChange={handleChange} />
+      </label>
+      <br />
+      <label>
+        Observações:
+        <textarea name="observacoes" value={form.observacoes} onChange={handleChange}></textarea>
+      </label>
+      <br />
+      <button type="submit">Enviar</button>
+    </form>
+
+      <h3>Dados digitados:</h3>
+      <pre>{JSON.stringify(form, null, 2)}</pre>
+  </div>
+)
+
+
+
+/* Tarefa adicao e exclusao de input */
+/* function App() {
   const [nome, setNome] = useState('')
   const [nomelist, setNomelist] = useState([])
   function exibirNome() {
@@ -27,7 +103,7 @@ function App() {
       {nomelist.map((nomelist, index)=><li key={index}>{nomelist} <button onClick={() => excluirNome(index)}>Excluir</button></li>)}
     </div> 
     )
-}
+} */
 
 /* Formulario email e nome */
 
@@ -66,5 +142,6 @@ function App() {
       <button onClick={() => Botao()}>Clique aqui</button>
       <input type="text" onChange={Capturar} />
     </div> */
+}
 
 export default App
