@@ -5,8 +5,89 @@ import './App.css'
 import Titulo from './components/Titulo'
 import Botao from './components/Botao'
 import Capturar from './components/Capturar'
+import CardAluno from './components/CardAluno'
 
 function App() {
+  return (
+    <div>
+      <CardAluno />
+    </div>
+  );
+}
+
+
+
+
+
+
+
+
+
+/* Formulario */
+/* function App() {
+  const [form, setForm] = useState({
+    nome: '',
+    email: '',
+    idade: '',
+    ativo: false,
+    observacao: ''
+  })
+
+  function handleChange(e) {
+    const { name, value, type, checked } = e.target
+    setForm(prevForm => ({
+      ...prevForm,
+      [name]: type === 'checkbox' ? checked : value
+    }))
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault()
+    console.log(form)
+  }
+
+  return (
+    <div id="container">
+      <h2 id="titulo">Formulário de Cadastro</h2>
+      <form onSubmit={handleSubmit}>
+        <label>
+          Nome:
+          <input type="text" name="nome" value={form.nome} onChange={handleChange} />
+        </label>
+        <br />
+        <label>
+          Email:
+          <input type="email" name="email" value={form.email} onChange={handleChange} />
+        </label>
+        <br />
+        <label>
+          Idade:
+          <input type="number" name="idade" value={form.idade} onChange={handleChange} />
+        </label>
+        <br />
+        <label>
+          Ativo:
+          <input type="checkbox" name="ativo" checked={form.ativo} onChange={handleChange} />
+        </label>
+        <br />
+        <label>
+          Observação:
+          <textarea name="observacao" value={form.observacao} onChange={handleChange}></textarea>
+        </label>
+        <br />
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  )
+} */
+
+
+
+
+
+/*Formulario */
+
+/* function App() {
   const [form, setForm] = useState({
     nome: '',
     email: '',
@@ -77,7 +158,7 @@ return (
       <h3>Dados digitados:</h3>
       <pre>{JSON.stringify(form, null, 2)}</pre>
   </div>
-)
+) */
 
 
 
@@ -142,6 +223,6 @@ return (
       <button onClick={() => Botao()}>Clique aqui</button>
       <input type="text" onChange={Capturar} />
     </div> */
-}
+
 
 export default App
