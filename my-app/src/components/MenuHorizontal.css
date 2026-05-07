@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #222;
+    padding: 15px 0;
+}
+
+.menu-horizontal ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-horizontal a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu-horizontal a:hover {
+    color: #61dafb;
+}

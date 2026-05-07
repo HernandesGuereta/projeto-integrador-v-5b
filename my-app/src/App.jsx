@@ -2,15 +2,14 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import Titulo from './components/Titulo'
-import Botao from './components/Botao'
-import Capturar from './components/Capturar'
 import CardAluno from './components/CardAluno'
+import ListaProdutos from './components/ListaProdutos'
+import MenuHorizontal from './components/MenuHorizontal'
 
 function App() {
   return (
     <div>
-      <CardAluno />
+      <MenuHorizontal />
     </div>
   );
 }

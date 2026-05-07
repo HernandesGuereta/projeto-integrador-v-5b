@@ -1,0 +1,33 @@
+.lista {
+    border: 3px solid black;
+    width: 300px;
+    height: 300px;
+}
+
+.produto1, .produto2, .produto3 {
+    border: 2px solid black;
+    width: 80%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    transition: all 0.7s;
+}
+
+.produto1 {
+    background-color: #d1e7dd;
+}
+
+.produto2 {
+    background-color: #f8d7da;
+}
+
+.produto3 {
+    background-color: #fff3cd;
+}
+
+.produto1:hover, .produto2:hover, .produto3:hover {
+    transform: scale(1.1);
+    background-color: #cfe2ff;
+}
