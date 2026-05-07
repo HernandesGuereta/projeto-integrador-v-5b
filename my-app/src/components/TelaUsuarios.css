@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.tela-usuarios {
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.tela-usuarios h2 {
+  font-size: 42px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+.tela-usuarios ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+}
+
+.card-usuarios {
+  background-color: black;
+  color: white;
+  width: 300px;
+  height: 300px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+  transition: 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.card-usuarios:hover {
+  transform: scale(1.03);
+}
+
+.card-usuarios h3 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 22px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.card-usuarios p {
+  margin-bottom: 8px;
+}
+
+

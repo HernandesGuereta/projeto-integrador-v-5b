@@ -1,0 +1,39 @@
+.grid-produtos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.grid-produtos .produto {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+.grid-produtos .produto img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+.grid-produtos .produto h3 {
+  margin: 0;
+  font-size: 1.2em;
+}
+.grid-produtos .produto p {
+  margin: 10px 0 0;
+  font-size: 1em;
+  color: #333;
+}
+.grid-produtos .produto button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.grid-produtos .produto button:hover {
+  background-color: #0056b3;
+  transition: background-color 0.3s;
+}

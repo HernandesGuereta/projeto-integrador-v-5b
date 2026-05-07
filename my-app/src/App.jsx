@@ -7,11 +7,18 @@ import MenuHorizontal from './components/MenuHorizontal'
 import CssCondicional from './components/CssCondicional'
 import ListaFilmes from './components/ListaFilmes'
 import CssInline from './components/CssInline'
-
+import TelaUsuarios from './components/TelaUsuarios'
+import GridProdutos from './components/GridProdutos'
+import BotaoDinamico from './components/BotaoDinamico'
+import DesafioCompleto from './components/DesafioCompleto'
+import './App.css'
 function App() {
   return (
     <div>
-      <CssInline />
+    <div className="App">
+      <h1 style={{ textAlign: 'center', marginTop: '30px', marginLeft: '400px' }}>Minha Loja Online</h1>
+      <DesafioCompleto />
+    </div>
     </div>
   );
 }
