@@ -1,16 +1,41 @@
-import './ListaProdutos.css'
+import "./ListaProdutos.css"
 
 function ListaProdutos() {
+  const produtos = [
+    {
+      id: 1,
+      nome: "Mouse Gamer",
+      preco: 150,
+      cor: "#ffb3b3"
+    },
+    {
+      id: 2,
+      nome: "Teclado Mecânico",
+      preco: 300,
+      cor: "#b3d9ff"
+    },
+    {
+      id: 3,
+      nome: "Monitor 240hz",
+      preco: 1800,
+      cor: "#b3ffcc"
+    }
+  ]
+
   return (
-    <div className="lista">
-      <h2>Lista de Produtos</h2>
-      <ul>
-        <li className="produto1">Teclado R$ 100,00</li>
-        <li className="produto2">Mouse R$ 50,00</li>
-        <li className="produto3">Monitor R$ 300,00</li>
-      </ul>
+    <div className="container">
+      {produtos.map((produto) => (
+        <div
+          key={produto.id}
+          className="card"
+          style={{ backgroundColor: produto.cor }}
+        >
+          <h2>{produto.nome}</h2>
+          <p>R$ {produto.preco}</p>
+        </div>
+      ))}
     </div>
-  );
+  )
 }
 
 export default ListaProdutos;

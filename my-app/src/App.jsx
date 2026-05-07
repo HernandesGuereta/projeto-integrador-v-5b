@@ -1,26 +1,20 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
 import CardAluno from './components/CardAluno'
 import ListaProdutos from './components/ListaProdutos'
 import MenuHorizontal from './components/MenuHorizontal'
+import CssCondicional from './components/CssCondicional'
+import ListaFilmes from './components/ListaFilmes'
+import CssInline from './components/CssInline'
 
 function App() {
   return (
     <div>
-      <MenuHorizontal />
+      <CssInline />
     </div>
   );
 }
-
-
-
-
-
-
-
-
 
 /* Formulario */
 /* function App() {
